@@ -1,13 +1,13 @@
 
 # -------------------- EDIT THESE VARIABLES -------------------- #
 $IMAGE_URL    = "https://i.imgur.com/X8hiPwF.jpg"
-$API_ENDPOINT = "ai-test-demo.cognitiveservices.azure.com"
-$API_KEY      = "d47c80d392af43fd84cd4454a292bc51"
+$API_ENDPOINT = "https://westcentralus.api.cognitive.microsoft.com/vision"
+$API_KEY      = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 # -------------------------------------------------------------- #
 
 $FEATURES = "Adult,Categories,Description"
 $DETAILS  = "Celebrities"
-$URI      = "https://$($API_ENDPOINT)/vision/v3.1/analyze?visualFeatures=$($FEATURES)&details=$($DETAILS)"
+$URI      = "$($API_ENDPOINT)/v3.1/analyze?visualFeatures=$($FEATURES)&details=$($DETAILS)"
 $headers  = @{"Ocp-Apim-Subscription-Key"="$($API_KEY)"}
 $body     = "{'url':'$($IMAGE_URL)'}"
 
